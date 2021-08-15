@@ -9,7 +9,7 @@ import QuoteList from "../components/QuoteList";
 import axios from "axios";
 
 export default {
-  name: "Home",
+  name: "Random",
   components: {
     QuoteList,
   },
@@ -20,9 +20,9 @@ export default {
   },
   created() {
     axios
-      .get("/quotes")
+      .get("/random")
       .then((res) => {
-        this.quotes = res.data.results;
+        this.quotes = [res.data];
       })
       .catch((err) => {
         console.error(err);

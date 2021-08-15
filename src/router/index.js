@@ -10,6 +10,11 @@ const routes = [
     name: "Home",
     component: Home,
   },
+  {
+    path: '/random',
+    name: 'Random',
+    component: () => import('../views/Random.vue')
+  },
 ];
 
 const router = new VueRouter({ routes });
