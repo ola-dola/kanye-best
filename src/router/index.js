@@ -11,9 +11,14 @@ const routes = [
     component: Home,
   },
   {
-    path: '/random',
-    name: 'Random',
-    component: () => import('../views/Random.vue')
+    path: "/random",
+    name: "Random",
+    component: () => import("../views/Random.vue"),
+  },
+  {
+    path: "/my-fav",
+    name: "Favourites",
+    component: () => import("../views/Favourites.vue"),
   },
 ];
 

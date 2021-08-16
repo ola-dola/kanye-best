@@ -2,7 +2,9 @@
   <div>
     <p>
       {{ quote.content }}
-      <button @click="addToFav">Add to Fav</button>
+      <button @click="addToFav" v-if="this.$route.name != 'Favourites'">
+        Add to Fav
+      </button>
     </p>
   </div>
 </template>
