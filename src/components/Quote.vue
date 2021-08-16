@@ -5,6 +5,7 @@
       <button @click="addToFav" v-if="this.$route.name != 'Favourites'">
         Add to Fav
       </button>
+      <button @click="$emit('del-fav', quote._id)" v-else>Delete</button>
     </p>
   </div>
 </template>
